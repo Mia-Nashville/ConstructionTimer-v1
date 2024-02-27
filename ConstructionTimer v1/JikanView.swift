@@ -12,11 +12,18 @@ struct JikanView: View {
     @StateObject private var viewModel = JikanViewModel()
     var backgroundGradient =  Color(#colorLiteral(red: 0.05786960235, green: 0.03020962386, blue: 0.09482574627, alpha: 1))
     
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            progressView
+        ZStack {
             
-           timerControl
+            VStack(alignment: .leading, spacing: 5) {
+                progressView
+                
+               timerControl
+                
+                DropDownList()
+                    .padding(.horizontal, 60)
+            }
         }
         
     }
@@ -84,7 +91,7 @@ struct JikanView: View {
                 })
             }
         }
-        .padding(.leading, 30)
+        .padding(.leading, 40)
          Spacer()
     }
     

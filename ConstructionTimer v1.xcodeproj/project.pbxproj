@@ -24,6 +24,7 @@
 		E4CE1A712B8E6FDC0021F362 /* JikanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A702B8E6FDC0021F362 /* JikanViewModel.swift */; };
 		E4CE1A732B8E78580021F362 /* JikanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A722B8E78580021F362 /* JikanView.swift */; };
 		E4CE1A752B8E7C9E0021F362 /* JikanRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A742B8E7C9E0021F362 /* JikanRing.swift */; };
+		E4CE1A772B8E85EF0021F362 /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A762B8E85EE0021F362 /* DropDownList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E4CE1A702B8E6FDC0021F362 /* JikanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanViewModel.swift; sourceTree = "<group>"; };
 		E4CE1A722B8E78580021F362 /* JikanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanView.swift; sourceTree = "<group>"; };
 		E4CE1A742B8E7C9E0021F362 /* JikanRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanRing.swift; sourceTree = "<group>"; };
+		E4CE1A762B8E85EE0021F362 /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				E4291E052B7AC41700FB67C6 /* CircularRing.swift */,
 				E4291E072B7AC57600FB67C6 /* StopWatchView.swift */,
 				E4CE1A722B8E78580021F362 /* JikanView.swift */,
+				E4CE1A762B8E85EE0021F362 /* DropDownList.swift */,
 				E4291DD12B76E7D400FB67C6 /* Assets.xcassets */,
 				E4291DD32B76E7D400FB67C6 /* Preview Content */,
 			);
@@ -292,6 +295,7 @@
 				E4291DF82B76E7F100FB67C6 /* TimePickerView.swift in Sources */,
 				E4CE1A752B8E7C9E0021F362 /* JikanRing.swift in Sources */,
 				E4CE1A712B8E6FDC0021F362 /* JikanViewModel.swift in Sources */,
+				E4CE1A772B8E85EF0021F362 /* DropDownList.swift in Sources */,
 				E4291E062B7AC41700FB67C6 /* CircularRing.swift in Sources */,
 				E4291E082B7AC57600FB67C6 /* StopWatchView.swift in Sources */,
 				E4291DFE2B79021000FB67C6 /* ProgressRing.swift in Sources */,
