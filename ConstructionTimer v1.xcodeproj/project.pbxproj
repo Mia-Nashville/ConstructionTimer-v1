@@ -24,6 +24,8 @@
 		E43C6A6E2B90F14C00CD50B2 /* StopWatchQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6A6D2B90F14C00CD50B2 /* StopWatchQuestion.swift */; };
 		E43C6A702B90F77900CD50B2 /* CustomTextFieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6A6F2B90F77900CD50B2 /* CustomTextFieldButton.swift */; };
 		E43C6A732B90FC0C00CD50B2 /* TextFrameViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6A722B90FC0C00CD50B2 /* TextFrameViewModifiers.swift */; };
+		E43C6AAD2B91203700CD50B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6AAC2B91203700CD50B2 /* AppDelegate.swift */; };
+		E43C6AAF2B91206900CD50B2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6AAE2B91206900CD50B2 /* AppConstants.swift */; };
 		E4CE1A712B8E6FDC0021F362 /* JikanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A702B8E6FDC0021F362 /* JikanViewModel.swift */; };
 		E4CE1A732B8E78580021F362 /* JikanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A722B8E78580021F362 /* JikanView.swift */; };
 		E4CE1A752B8E7C9E0021F362 /* JikanRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A742B8E7C9E0021F362 /* JikanRing.swift */; };
@@ -69,6 +71,8 @@
 		E43C6A6D2B90F14C00CD50B2 /* StopWatchQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchQuestion.swift; sourceTree = "<group>"; };
 		E43C6A6F2B90F77900CD50B2 /* CustomTextFieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldButton.swift; sourceTree = "<group>"; };
 		E43C6A722B90FC0C00CD50B2 /* TextFrameViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFrameViewModifiers.swift; sourceTree = "<group>"; };
+		E43C6AAC2B91203700CD50B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E43C6AAE2B91206900CD50B2 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E4CE1A702B8E6FDC0021F362 /* JikanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanViewModel.swift; sourceTree = "<group>"; };
 		E4CE1A722B8E78580021F362 /* JikanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanView.swift; sourceTree = "<group>"; };
 		E4CE1A742B8E7C9E0021F362 /* JikanRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanRing.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				E4291DCD2B76E7D300FB67C6 /* ConstructionTimer_v1App.swift */,
+				E43C6AAC2B91203700CD50B2 /* AppDelegate.swift */,
+				E43C6AAE2B91206900CD50B2 /* AppConstants.swift */,
 				E4291DCF2B76E7D300FB67C6 /* ContentView.swift */,
 				E4CE1A782B8E99250021F362 /* NotificationCenter.swift */,
 				E4291DF72B76E7F100FB67C6 /* TimePickerView.swift */,
@@ -310,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43C6AAF2B91206900CD50B2 /* AppConstants.swift in Sources */,
 				E4CE1A732B8E78580021F362 /* JikanView.swift in Sources */,
 				E4291DD02B76E7D300FB67C6 /* ContentView.swift in Sources */,
 				E4291DF82B76E7F100FB67C6 /* TimePickerView.swift in Sources */,
@@ -322,6 +329,7 @@
 				E4291E082B7AC57600FB67C6 /* StopWatchView.swift in Sources */,
 				E4291DFE2B79021000FB67C6 /* ProgressRing.swift in Sources */,
 				E4CE1A792B8E99250021F362 /* NotificationCenter.swift in Sources */,
+				E43C6AAD2B91203700CD50B2 /* AppDelegate.swift in Sources */,
 				E43C6A732B90FC0C00CD50B2 /* TextFrameViewModifiers.swift in Sources */,
 				E4291E042B7AACA900FB67C6 /* TimeViewModel.swift in Sources */,
 				E4291DFA2B76EA4D00FB67C6 /* TimerView.swift in Sources */,

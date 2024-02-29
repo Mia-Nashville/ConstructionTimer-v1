@@ -13,12 +13,17 @@ enum JikanStates {
     case paused
     case resumed
     case cancelled
+  //  case record
 }
 
 final class JikanViewModel: ObservableObject {
     @Published var secondsToCompletion = 0
     @Published var progress: CGFloat = 0.0
     @Published var completionDate = Date.now
+    
+    var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+    var updateTimer: Timer?
+    
     
     init() {
         let calender = Calendar.current
@@ -30,8 +35,44 @@ final class JikanViewModel: ObservableObject {
         endTime = scheduledTime.addingTimeInterval(1)
     }
     
-    private var timer = Timer()
+    private var timer: Timer?
+  //  private var timer = Timer()
     private var totalTimeForCurrentSelection: Int = 0
+    
+    // MARK: - backgroundTask
+    
+    func registerBackgroundTask() {
+        backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+            print("iOS has singnaled time has expired")
+            self?.endBackgroundTaskIfActive()
+        }
+    }
+    
+    func endBackgroundTaskIfActive() {
+        let isBackgroundTaskActive = backgroundTask != .invalid
+        if isBackgroundTaskActive {
+            print("Background Task has ended")
+            UIApplication.shared.endBackgroundTask(backgroundTask)
+            backgroundTask = .invalid
+        }
+    }
+    
+    func onChangeofScenePhase(_ newPhase: ScenePhase) {
+        switch newPhase {
+        case .background:
+            let isTimerRunning = timer != nil
+            let isTaskUnregistered = backgroundTask == .invalid
+            
+            if isTimerRunning && isTaskUnregistered {
+                registerBackgroundTask()
+            }
+        case .active:
+            endBackgroundTaskIfActive()
+        default:
+            break
+        }
+        
+    }
     
     private func updateCompletionDate() {
         completionDate = Date.now.addingTimeInterval(Double(secondsToCompletion))
@@ -73,16 +114,21 @@ final class JikanViewModel: ObservableObject {
                 updateCompletionDate()
                 
             case .paused:
-                timer.invalidate()
+                timer?.invalidate()
             case .resumed:
                 startTimer()
                 
                 updateCompletionDate()
                 
             case .cancelled:
-                timer.invalidate()
+                timer?.invalidate()
                 secondsToCompletion = 0
                 progress = 0
+                
+//            case .record:
+//                timer?.invalidate()
+//                secondsToCompletion = 0
+//                progress = 0
             }
         }
     }

@@ -10,6 +10,8 @@ import SwiftUI
 struct JikanView: View {
     var buttonStyleConfig = ButtonStyleService()
     @StateObject private var viewModel = JikanViewModel()
+    @Environment(\.scenePhase) var scenePhase
+    
     var backgroundGradient =  Color(#colorLiteral(red: 0.05786960235, green: 0.03020962386, blue: 0.09482574627, alpha: 1))
     let notification = NotificationCenter()
     
@@ -26,7 +28,12 @@ struct JikanView: View {
                     .padding(.horizontal, 12)
                 Spacer()
             }
+         
+            .onChange(of: scenePhase) { newPhase in
+                viewModel.onChangeofScenePhase(newPhase)
+            }
         }
+        
     }
     
     @ViewBuilder
@@ -63,6 +70,14 @@ struct JikanView: View {
             }, label: {
                 buttonStyleConfig.cancelbutton()
             })
+            
+            Button(action: {
+                // add viewModel here
+          
+            }, label: {
+                buttonStyleConfig.recordbutton()
+            })
+            .padding(.horizontal, 20)
             Spacer()
             
             switch viewModel.timeStates {
@@ -92,6 +107,12 @@ struct JikanView: View {
                 }, label: {
                     buttonStyleConfig.startbutton()
                 })
+//            case .record:
+//                Button(action: {
+//                    viewModel.timeStates = .paused
+//                }, label: {
+//                    buttonStyleConfig.recordbutton()
+//                })
             }
         }
         .padding()
