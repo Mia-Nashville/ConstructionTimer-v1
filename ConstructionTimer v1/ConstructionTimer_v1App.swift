@@ -11,8 +11,9 @@ import SwiftUI
 struct ConstructionTimer_v1App: App {
     var body: some Scene {
         WindowGroup {
-       //     ContentView()
-          //  TimerView()
+         //   ContentView()
+        
+        //    TimerView()
             JikanView()
         }
     }

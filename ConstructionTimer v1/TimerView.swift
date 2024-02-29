@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TimerView: View {
     var buttonStyleConfig = ButtonStyleService()
-    @StateObject private var viewModel = TimerViewModel()
+  //  @StateObject private var viewModel = TimerViewModel()
+     @StateObject private var viewModel = TimerViewModel()
+    let notification = NotificationCenter()
+    
+    @State private var timeInterval: Double = 30.0
     
     var body: some View {
         VStack(spacing: 10) {
@@ -26,7 +30,6 @@ struct TimerView: View {
         .foregroundColor(.white)
     }
 
-    
     @ViewBuilder
     var progressView: some View {
         ZStack {
@@ -75,6 +78,8 @@ struct TimerView: View {
             Button(action: {
                 viewModel.timeState = .cancelled
                 
+                notification.sendNotification(date: Date(), type: "time", timeInterval: timeInterval, title: "Time Interval", body: "This is a reminder that your time has passed the requested time")
+                
             }, label: {
                 buttonStyleConfig.cancelbutton()
             })
@@ -102,6 +107,9 @@ struct TimerView: View {
             case .cancelled:
                 Button(action: {
                     viewModel.timeState = .active
+                    
+                    notification.sendNotification(date: Date(), type: "time", timeInterval: timeInterval, title: "Time Interval", body: "This is a reminder that your time has passed the requested time")
+                    
                 }, label: {
                     buttonStyleConfig.startbutton()
                 })

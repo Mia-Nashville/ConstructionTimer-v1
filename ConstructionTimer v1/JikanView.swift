@@ -11,21 +11,22 @@ struct JikanView: View {
     var buttonStyleConfig = ButtonStyleService()
     @StateObject private var viewModel = JikanViewModel()
     var backgroundGradient =  Color(#colorLiteral(red: 0.05786960235, green: 0.03020962386, blue: 0.09482574627, alpha: 1))
-    
+    let notification = NotificationCenter()
     
     var body: some View {
         ZStack {
             
             VStack(alignment: .leading, spacing: 5) {
                 progressView
-                
+                    .padding(.top)
+                    
                timerControl
                 
                 DropDownList()
-                    .padding(.horizontal, 60)
+                    .padding(.horizontal, 12)
+                Spacer()
             }
         }
-        
     }
     
     @ViewBuilder
@@ -33,11 +34,11 @@ struct JikanView: View {
         ZStack {
             withAnimation {
                 JikanRing(progress: viewModel.progress)
+                    
 //                ProgressRing(progress: viewModel.progress)
                     .environmentObject(viewModel)
-                    .padding()
             }
-            VStack(spacing: 10) {
+            VStack(spacing: 5) {
                 
                 Text(viewModel.secondsToCompletion.asTimestamps)
                     .font(.largeTitle)
@@ -50,7 +51,7 @@ struct JikanView: View {
             }
         }
         .frame(width: 360, height: 260)
-        .padding(.all, 32)
+        .padding()
     }
     
     @ViewBuilder
@@ -86,13 +87,15 @@ struct JikanView: View {
             case .cancelled:
                 Button(action: {
                     viewModel.timeStates = .active
+                    
+                    notification.sendNotification(date: Date(), type: "time", timeInterval: 30, title: "Time Interval", body: "This is a reminder that your time has passed the requested time")
                 }, label: {
                     buttonStyleConfig.startbutton()
                 })
             }
         }
-        .padding(.leading, 40)
-         Spacer()
+        .padding()
+         
     }
     
 }

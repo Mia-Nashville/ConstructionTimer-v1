@@ -21,10 +21,14 @@
 		E4291E042B7AACA900FB67C6 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4291E032B7AACA900FB67C6 /* TimeViewModel.swift */; };
 		E4291E062B7AC41700FB67C6 /* CircularRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4291E052B7AC41700FB67C6 /* CircularRing.swift */; };
 		E4291E082B7AC57600FB67C6 /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4291E072B7AC57600FB67C6 /* StopWatchView.swift */; };
+		E43C6A6E2B90F14C00CD50B2 /* StopWatchQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6A6D2B90F14C00CD50B2 /* StopWatchQuestion.swift */; };
+		E43C6A702B90F77900CD50B2 /* CustomTextFieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6A6F2B90F77900CD50B2 /* CustomTextFieldButton.swift */; };
+		E43C6A732B90FC0C00CD50B2 /* TextFrameViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C6A722B90FC0C00CD50B2 /* TextFrameViewModifiers.swift */; };
 		E4CE1A712B8E6FDC0021F362 /* JikanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A702B8E6FDC0021F362 /* JikanViewModel.swift */; };
 		E4CE1A732B8E78580021F362 /* JikanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A722B8E78580021F362 /* JikanView.swift */; };
 		E4CE1A752B8E7C9E0021F362 /* JikanRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A742B8E7C9E0021F362 /* JikanRing.swift */; };
 		E4CE1A772B8E85EF0021F362 /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A762B8E85EE0021F362 /* DropDownList.swift */; };
+		E4CE1A792B8E99250021F362 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE1A782B8E99250021F362 /* NotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +66,14 @@
 		E4291E032B7AACA900FB67C6 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		E4291E052B7AC41700FB67C6 /* CircularRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularRing.swift; sourceTree = "<group>"; };
 		E4291E072B7AC57600FB67C6 /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
+		E43C6A6D2B90F14C00CD50B2 /* StopWatchQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchQuestion.swift; sourceTree = "<group>"; };
+		E43C6A6F2B90F77900CD50B2 /* CustomTextFieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldButton.swift; sourceTree = "<group>"; };
+		E43C6A722B90FC0C00CD50B2 /* TextFrameViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFrameViewModifiers.swift; sourceTree = "<group>"; };
 		E4CE1A702B8E6FDC0021F362 /* JikanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanViewModel.swift; sourceTree = "<group>"; };
 		E4CE1A722B8E78580021F362 /* JikanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanView.swift; sourceTree = "<group>"; };
 		E4CE1A742B8E7C9E0021F362 /* JikanRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanRing.swift; sourceTree = "<group>"; };
 		E4CE1A762B8E85EE0021F362 /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
+		E4CE1A782B8E99250021F362 /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			children = (
 				E4291DCD2B76E7D300FB67C6 /* ConstructionTimer_v1App.swift */,
 				E4291DCF2B76E7D300FB67C6 /* ContentView.swift */,
+				E4CE1A782B8E99250021F362 /* NotificationCenter.swift */,
 				E4291DF72B76E7F100FB67C6 /* TimePickerView.swift */,
 				E4291DF92B76EA4D00FB67C6 /* TimerView.swift */,
 				E4291DFB2B78F52900FB67C6 /* ButtonStyleService.swift */,
@@ -129,6 +138,8 @@
 				E4291E072B7AC57600FB67C6 /* StopWatchView.swift */,
 				E4CE1A722B8E78580021F362 /* JikanView.swift */,
 				E4CE1A762B8E85EE0021F362 /* DropDownList.swift */,
+				E43C6A6D2B90F14C00CD50B2 /* StopWatchQuestion.swift */,
+				E43C6A712B90FBDE00CD50B2 /* Extensions */,
 				E4291DD12B76E7D400FB67C6 /* Assets.xcassets */,
 				E4291DD32B76E7D400FB67C6 /* Preview Content */,
 			);
@@ -158,6 +169,15 @@
 				E4291DEA2B76E7D400FB67C6 /* ConstructionTimer_v1UITestsLaunchTests.swift */,
 			);
 			path = "ConstructionTimer v1UITests";
+			sourceTree = "<group>";
+		};
+		E43C6A712B90FBDE00CD50B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E43C6A6F2B90F77900CD50B2 /* CustomTextFieldButton.swift */,
+				E43C6A722B90FC0C00CD50B2 /* TextFrameViewModifiers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +315,14 @@
 				E4291DF82B76E7F100FB67C6 /* TimePickerView.swift in Sources */,
 				E4CE1A752B8E7C9E0021F362 /* JikanRing.swift in Sources */,
 				E4CE1A712B8E6FDC0021F362 /* JikanViewModel.swift in Sources */,
+				E43C6A6E2B90F14C00CD50B2 /* StopWatchQuestion.swift in Sources */,
+				E43C6A702B90F77900CD50B2 /* CustomTextFieldButton.swift in Sources */,
 				E4CE1A772B8E85EF0021F362 /* DropDownList.swift in Sources */,
 				E4291E062B7AC41700FB67C6 /* CircularRing.swift in Sources */,
 				E4291E082B7AC57600FB67C6 /* StopWatchView.swift in Sources */,
 				E4291DFE2B79021000FB67C6 /* ProgressRing.swift in Sources */,
+				E4CE1A792B8E99250021F362 /* NotificationCenter.swift in Sources */,
+				E43C6A732B90FC0C00CD50B2 /* TextFrameViewModifiers.swift in Sources */,
 				E4291E042B7AACA900FB67C6 /* TimeViewModel.swift in Sources */,
 				E4291DFA2B76EA4D00FB67C6 /* TimerView.swift in Sources */,
 				E4291DFC2B78F52900FB67C6 /* ButtonStyleService.swift in Sources */,

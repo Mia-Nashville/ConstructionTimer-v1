@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct DropDownList: View {
+    
     var constructionDelay: Array = ["Utility Delay", "GC Site Preparation Delay", "Internal Equipment Delay", "Weather Delay", "Material Delay", "Design, Permit, Contract Delay", "Self Inflicted Delay", "None"]
     
+    @State var delayEncountered: String = "2 hour GC Delay"
     @State var actualDelay: String = "None"
-    var backgroundGradient =  Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
+    var backgroundGradient =  Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+    
+    
+    @State var textfieldDescription: String = ""
     
     private func subheadlineText(withPlaceholder Placeholder: String) -> some View {
         Text(Placeholder)
@@ -23,6 +28,7 @@ struct DropDownList: View {
     var body: some View {
         VStack(alignment: .leading) {
             subheadlineText(withPlaceholder: "Select Construction Delay")
+                .padding(.horizontal, 30)
             
             HStack {
                 GradientIconButton(icon: "exclamationmark.triangle.fill")
@@ -37,11 +43,22 @@ struct DropDownList: View {
                 .pickerStyle(.menu)
                 .font(.headline)
             }
+            .padding(.horizontal, 30)
+            .padding(.bottom)
+            
+            HStack(spacing: 5) {
+                TextEditor(text: $delayEncountered)
+                    .modifier(TextFieldClearButton(nextText: $delayEncountered))
+                    .modifier(ChangeSmallerFrameSize())
+            }
+            .font(.headline)
         }
-        .frame(width: 320, height: 100)
+        .padding()
+        .frame(width: 370, height: 220)
      //   .background(.ultraThickMaterial)
         .background(backgroundGradient)
         .cornerRadius(20)
+        .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 4)
         Spacer()
     }
 }

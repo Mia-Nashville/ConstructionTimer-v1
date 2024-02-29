@@ -35,8 +35,9 @@ struct JikanRing: View {
          //       .animation(.easeInOut(duration: 1.0), value: progress)
                 .animation(.easeInOut(duration: 1.0), value: progressVM.progress)
         }
-        .frame(width: 300, height: 300)
+        .frame(width: 280, height: 280)
         .padding()
+        
     }
 }
 
