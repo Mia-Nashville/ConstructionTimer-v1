@@ -16,7 +16,8 @@ struct ConstructionTimer_v1App: App {
          //   ContentView()
         
         //    TimerView()
-            JikanView()
+           JikanView()
+             //   .environmentObject(JikanViewModel())
         }
     }
 }

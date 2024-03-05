@@ -45,17 +45,43 @@ struct ButtonStyleService {
             .shadow(radius: 10)
     }
     
-        func recordbutton() -> some View {
-            Text("Record")
-                .fontWeight(.semibold)
-                .font(.title3)
-                .lineLimit(1)
-                .padding()
-                .frame(width: 100, height: 200)
-                .foregroundColor(.white)
-                .background(Color(#colorLiteral(red: 0.3630844653, green: 0.3664460778, blue: 1, alpha: 1)))
-                .clipShape(Circle())
-                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-        }
+    func recordButton2(color: Color, text: String) -> some View {
+        Text(text)
+            .fontWeight(.semibold)
+            .font(.title3)
+            .lineLimit(2)
+            .padding()
+            .frame(width: 100, height: 200)
+            .foregroundColor(.white)
+            .background(color)
+            .clipShape(Circle())
+            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
     }
+    
+    func recordbutton() -> some View {
+        Text("Record")
+            .fontWeight(.semibold)
+            .font(.title3)
+            .lineLimit(1)
+            .padding()
+            .frame(width: 100, height: 200)
+            .foregroundColor(.white)
+            .background(Color(#colorLiteral(red: 0.3630844653, green: 0.3664460778, blue: 1, alpha: 1)))
+            .clipShape(Circle())
+            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+    }
+    
+    func stopRecording() -> some View {
+        Text("Stop Recording")
+            .fontWeight(.semibold)
+            .font(.title3)
+            .lineLimit(1)
+            .padding()
+            .frame(width: 100, height: 200)
+            .foregroundColor(.white)
+            .background(Color(#colorLiteral(red: 1, green: 0.1614242494, blue: 0.02747139335, alpha: 0.8685844371)))
+            .clipShape(Circle())
+            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+    }
+}
 

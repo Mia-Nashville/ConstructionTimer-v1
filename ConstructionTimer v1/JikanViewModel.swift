@@ -13,7 +13,8 @@ enum JikanStates {
     case paused
     case resumed
     case cancelled
-  //  case record
+    case record
+    case stoprecording
 }
 
 final class JikanViewModel: ObservableObject {
@@ -129,6 +130,15 @@ final class JikanViewModel: ObservableObject {
 //                timer?.invalidate()
 //                secondsToCompletion = 0
 //                progress = 0
+            case .record:
+                startTimer()
+                secondsToCompletion = totalTimeForCurrentSelection
+                progress = 1.0
+                updateCompletionDate()
+                
+            case .stoprecording:
+                timer?.invalidate()
+               
             }
         }
     }
